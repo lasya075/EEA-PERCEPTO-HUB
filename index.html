@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Sign Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>SIGN LANGUAGE DETECTION</h1>
+    <h3>EEA - PERCEPTO HUB</h3>
+
+    <div class="image-gallery">
+        <img src="{{ url_for('static', filename='images/sign.png') }}" alt="Signs">
+    </div>
+
+    <div class="button-container">
+        <a href="{{ url_for('detect') }}">
+            <button id="start-button">Start Detection</button>
+        </a>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>Developed by Shivalasya</p>
+    </footer>
+</body>
+</html>
+
+
+
