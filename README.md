@@ -22,19 +22,24 @@ This project implements a real-time hand gesture recognition system using **Medi
 
 ---
 
-## Project Structure
-├── data.pkl # Preprocessed dataset (12000 samples)
-├── best_model.pkl # Trained ML model saved using pickle
-├── mytrain_model.py # Script to train and evaluate models
-├── mytest_model.py  # Real-time webcam-based gesture detection
-├── mydata_collect.py # (Optional) Data collection script for new signs
-├── mycreate_landmarks.py # pickle file of dataset with landmarks
-├── app.py                      # Flask GUI application (already built)
+### Project Structure
+
+```
+├── data.pkl                 # Preprocessed dataset (12000+ samples with landmark vectors)
+├── best_model.pkl           # Trained ML model (Random Forest, via pickle)
+├── mytrain_model.py         # Script to train and evaluate multiple ML models
+├── mytest_model.py          # Script for real-time webcam-based gesture testing
+├── mydata_collect.py        # (Optional) Data collection script for recording new gestures
+├── mycreate_landmarks.py    # Script to convert raw hand landmarks to dataset format
+├── app.py                   # Flask GUI application 
 ├── templates/
-    └── detect.html              # Web UI for predicting
-    └── index.html
-    └── style.css
-├── README.md # Project overview
+│   ├── index.html           # Main GUI page for uploading and predicting
+│   └── detect.html          # UI page for real-time output
+├── static/
+│   └── style.css            # CSS styles for web app
+├── README.md                # Project documentation
+```
+
 
 ---
 
@@ -50,5 +55,5 @@ This project implements a real-time hand gesture recognition system using **Medi
 ###  Install Dependencies
 
 ```bash
-pip install opencv-python mediapipe scikit-learn numpy
+pip install opencv-python mediapipe scikit-learn numpy flask
 
